@@ -1,0 +1,500 @@
+/* =========================
+   1. 기본 색상과 간격 설정
+========================= */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #2563eb;
+  --section-bg-color: #f8fafc;
+
+  --max-width: 1100px;
+  --section-padding: 80px 20px;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #f3f4f6;
+  --primary-color: #60a5fa;
+  --section-bg-color: #1f2937;
+}
+
+
+/* =========================
+   2. 전체 기본 설정
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+
+/* =========================
+   3. 각 섹션 기본 디자인
+========================= */
+
+section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-padding);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+
+/* =========================
+   4. Header & Navigation
+========================= */
+
+header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+
+/* =========================
+   5. Hero
+========================= */
+
+#hero {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+
+#hero a {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 22px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  border-radius: 8px;
+  font-weight: bold;
+
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#hero a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+
+/* =========================
+   6. Skills
+========================= */
+
+#skills {
+  background-color: var(--section-bg-color);
+  border-radius: 16px;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+#skills h2 {
+  grid-column: 1 / -1;
+}
+
+#skills article {
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s;
+}
+
+#skills article:hover {
+  transform: translateY(-4px);
+}
+
+#skills article ul {
+  padding-left: 20px;
+}
+
+
+/* =========================
+   7. Responsive - Tablet
+========================= */
+
+@media (min-width: 768px) {
+
+  #skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* =========================
+   8. Projects
+========================= */
+
+#projects {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#projects-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background-color: var(--bg-color);
+  padding: 24px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   Theme Toggle Button
+========================= */
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#theme-toggle:hover {
+  background-color: var(--section-bg-color);
+}
+
+/* =========================
+   Mobile Navigation
+========================= */
+
+#menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* 모바일에서는 메뉴 목록 숨기기 */
+nav ul {
+  display: none;
+}
+
+/* 모바일에서 메뉴가 열렸을 때 */
+nav ul.active {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+/* =========================
+   Scrolled Header
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   Scroll To Top Button
+========================= */
+
+#scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s;
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   Scroll Animation
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   Profile Image
+========================= */
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+
+/* =========================
+   Desktop - 1024px 이상
+========================= */
+
+@media (min-width: 1024px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  #hero p {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* =========================
+   Contact Form
+========================= */
+
+#contact-form {
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 6px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font: inherit;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#contact-form button {
+  padding: 12px 24px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+#form-success {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  border-top: 1px solid #e5e7eb;
+}
+
+footer p {
+  margin: 0 0 8px;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 다크모드 프로젝트 카드 */
+[data-theme="dark"] .project-card {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
