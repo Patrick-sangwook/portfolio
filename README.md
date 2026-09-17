@@ -79,6 +79,26 @@ Mobile First 방식으로 제작했으며 다양한 화면 크기에 대응하�
 
 잘못된 입력이 있는 경우 오류 메시지를 표시하고 정상적으로 작성된 경우 성공 메시지를 표시합니다.
 
+## Deployment
+
+GitHub Pages를 이용하여 배포했습니다.
+
+배포 사이트: https://patrick-sangwook.github.io/portfolio/
+
+## Screenshots
+
+### Desktop
+
+![Desktop Screenshot](images/desktop.png)
+
+### Mobile
+
+![Mobile Screenshot](images/mobile.png)
+
+### Dark Mode
+
+![Dark Mode Screenshot](images/dark-mode.png)
+
 ## Author
 
 **이상욱 | Sangwook Lee**
