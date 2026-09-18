@@ -1,12 +1,12 @@
 # Personal Portfolio
 
-이상욱(Sangwook Lee)의 개인 포트폴리오 웹사이트입니다.
+개인 포트폴리오 웹사이트입니다.
 
 AI와 웹 개발을 학습하면서 HTML, CSS, JavaScript를 활용하여
 처음부터 직접 제작한 반응형 포트폴리오 웹사이트입니다.
 
 
-## 1. 미션 최종 결과물과 구현 내용
+## 1. 최종 결과물과 구현 내용
 
 ### 1) 반응형 웹사이트
 
@@ -14,7 +14,7 @@ AI와 웹 개발을 학습하면서 HTML, CSS, JavaScript를 활용하여
 모바일, 태블릿, 데스크톱 등 다양한 환경에서 레이아웃이 최적화되어 보이고,
 Hero, About, Skills, Projects, Contact, Footer 섹션을 포함
 
->>구현 내용
+>>
 Mobile First 방식으로 웹사이트를 제작하고 768px, 1024px을 기준으로
 반응형 레이아웃을 적용  
 Hero, About, Skills, Projects, Contact, Footer 영역을 각각 구성
@@ -26,7 +26,7 @@ Hero, About, Skills, Projects, Contact, Footer 영역을 각각 구성
 다크 모드, 햄버거 메뉴, 부드러운 스크롤, 스크롤 애니메이션 등의
 사용자 인터랙션과 폼 유효성 검사가 동작해야 합니다.
 
->>구현 내용  
+>>  
 JavaScript의 이벤트 처리를 이용하여 다크 모드와 모바일 햄버거 메뉴를 구현
 또한 Smooth Scroll, Scroll Top Button, 스크롤에 따른 Navigation 변화,
 Intersection Observer를 이용한 Scroll Animation을 구현
@@ -41,7 +41,7 @@ Contact Form에서는 이름, 이메일, 메시지의 입력값을 검사하고
 GitHub API에서 본인의 저장소 목록을 가져와 Projects 섹션에 동적으로 표시하고,
 로딩, 성공, 에러, 빈 상태를 UI로 표현해야 합니다.
 
->>구현 내용  
+>>  
 GitHub REST API와 `fetch`, `async/await`를 이용하여
 GitHub 저장소 정보를 가져오도록 구현
 
@@ -57,7 +57,7 @@ API 오류 발생 시 다시 요청할 수 있는 Retry 버튼도 구현
 **미션 요구사항**  
 다크 모드 설정을 LocalStorage에 저장하여 새로고침 후에도 유지해야 합니다.
 
->>구현 내용  
+>>  
 사용자가 선택한 Light/Dark Mode 값을 LocalStorage에 저장하고,
 페이지를 다시 열거나 새로고침 했을 때 저장된 테마를 불러오도록 구현
 
@@ -67,7 +67,7 @@ API 오류 발생 시 다시 요청할 수 있는 Retry 버튼도 구현
 **미션 요구사항**  
 GitHub Pages를 이용하여 외부에서 접속 가능한 웹사이트로 배포해야 합니다.
 
->>구현 내용  
+>>  
 완성된 프로젝트를 Git을 이용하여 GitHub Repository에 업로드하고,
 GitHub Pages를 이용하여 실제 웹사이트로 배포
 
@@ -80,7 +80,7 @@ GitHub Pages를 이용하여 실제 웹사이트로 배포
 쉽게 이해할 수 있도록 사용
 
 이번 프로젝트에서는 페이지의 역할에 따라
-`header`, `nav`, `main`, `section`, `article`, `footer`로 구조를 나누었습니다.
+`header`, `nav`, `main`, `section`, `article`, `footer`로 구조를 나눔
 
 단순히 모든 영역을 `div`로 만드는 것이 아니라
 각 콘텐츠의 의미와 역할을 기준으로 HTML 구조를 설계
@@ -92,7 +92,7 @@ Flexbox는 한 방향을 중심으로 요소를 배치할 때 사용하기 편�
 Grid는 행과 열을 이용하여 여러 요소를 배치할 때 적합
 
 이번 프로젝트에서는 Navigation의 로고와 메뉴를 배치하기 위해
-Flexbox를 사용했습니다.
+Flexbox를 사용
 
 Projects 영역에서는 여러 프로젝트 카드를 화면 크기에 따라
 자동으로 배치하기 위해 Grid의 `auto-fit`과 `minmax()`를 사용
@@ -263,6 +263,7 @@ portfolio/
     ├── desktop.png
     ├── mobile.png
     └── dark-mode.png
+```
 
 ## Projects
 
