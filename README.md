@@ -14,8 +14,7 @@ AI와 웹 개발을 학습하면서 HTML, CSS, JavaScript를 활용하여
 모바일, 태블릿, 데스크톱 등 다양한 환경에서 레이아웃이 최적화되어 보이고,
 Hero, About, Skills, Projects, Contact, Footer 섹션을 포함
 
->>
-Mobile First 방식으로 웹사이트를 제작하고 768px, 1024px을 기준으로
+>> Mobile First 방식으로 웹사이트를 제작하고 768px, 1024px을 기준으로
 반응형 레이아웃을 적용  
 Hero, About, Skills, Projects, Contact, Footer 영역을 각각 구성
 
@@ -26,8 +25,7 @@ Hero, About, Skills, Projects, Contact, Footer 영역을 각각 구성
 다크 모드, 햄버거 메뉴, 부드러운 스크롤, 스크롤 애니메이션 등의
 사용자 인터랙션과 폼 유효성 검사가 동작해야 합니다.
 
->>  
-JavaScript의 이벤트 처리를 이용하여 다크 모드와 모바일 햄버거 메뉴를 구현
+>> JavaScript의 이벤트 처리를 이용하여 다크 모드와 모바일 햄버거 메뉴를 구현
 또한 Smooth Scroll, Scroll Top Button, 스크롤에 따른 Navigation 변화,
 Intersection Observer를 이용한 Scroll Animation을 구현
 
@@ -41,8 +39,7 @@ Contact Form에서는 이름, 이메일, 메시지의 입력값을 검사하고
 GitHub API에서 본인의 저장소 목록을 가져와 Projects 섹션에 동적으로 표시하고,
 로딩, 성공, 에러, 빈 상태를 UI로 표현해야 합니다.
 
->>  
-GitHub REST API와 `fetch`, `async/await`를 이용하여
+>> GitHub REST API와 `fetch`, `async/await`를 이용하여
 GitHub 저장소 정보를 가져오도록 구현
 
 가져온 데이터는 `map()`을 이용하여 프로젝트 카드로 변환하고,
@@ -57,8 +54,7 @@ API 오류 발생 시 다시 요청할 수 있는 Retry 버튼도 구현
 **미션 요구사항**  
 다크 모드 설정을 LocalStorage에 저장하여 새로고침 후에도 유지해야 합니다.
 
->>  
-사용자가 선택한 Light/Dark Mode 값을 LocalStorage에 저장하고,
+>> 사용자가 선택한 Light/Dark Mode 값을 LocalStorage에 저장하고,
 페이지를 다시 열거나 새로고침 했을 때 저장된 테마를 불러오도록 구현
 
 
@@ -67,8 +63,7 @@ API 오류 발생 시 다시 요청할 수 있는 Retry 버튼도 구현
 **미션 요구사항**  
 GitHub Pages를 이용하여 외부에서 접속 가능한 웹사이트로 배포해야 합니다.
 
->>  
-완성된 프로젝트를 Git을 이용하여 GitHub Repository에 업로드하고,
+>> 완성된 프로젝트를 Git을 이용하여 GitHub Repository에 업로드하고,
 GitHub Pages를 이용하여 실제 웹사이트로 배포
 
 
@@ -265,37 +260,13 @@ portfolio/
     └── dark-mode.png
 ```
 
-## Projects
-
-GitHub REST API를 이용하여 GitHub에 등록된 프로젝트 정보를 자동으로 불러와 화면에 표시합니다.
-
-각 프로젝트의 이름, 설명, 사용 언어 및 GitHub 링크를 확인할 수 있습니다.
-
-## Responsive Design
-
-Mobile First 방식으로 제작했으며 다양한 화면 크기에 대응하도록 구성했습니다.
-
-- Mobile: 기본 레이아웃
-- Tablet / Small PC: 768px 이상
-- Desktop: 1024px 이상
-
-## Dark Mode
-
-사용자가 Light Mode와 Dark Mode를 전환할 수 있으며 선택한 테마는 LocalStorage에 저장되어 새로고침 후에도 유지됩니다.
-
-## Contact Form
-
-이름, 이메일, 메시지를 입력할 수 있으며 JavaScript를 이용하여 입력값을 검사합니다.
-
-잘못된 입력이 있는 경우 오류 메시지를 표시하고 정상적으로 작성된 경우 성공 메시지를 표시합니다.
-
-## Deployment
+## 7. Deployment
 
 GitHub Pages를 이용하여 배포했습니다.
 
 배포 사이트: https://patrick-sangwook.github.io/portfolio/
 
-## Screenshots
+## 8. Screenshots
 
 ### Desktop
 
@@ -303,13 +274,13 @@ GitHub Pages를 이용하여 배포했습니다.
 
 ### Mobile
 
-<img src="images/mobile.png" alt="Mobile Screenshot" width="350">
+<img src="images/mobile.png" alt="Mobile Screenshot" width="300">
 
 ### Dark Mode
 
 ![Dark Mode Screenshot](images/dark-mode.png)
 
-## Author
+## 9. Author
 
 **이상욱 | Sangwook Lee**
 
